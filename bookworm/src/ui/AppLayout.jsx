@@ -5,7 +5,9 @@ function AppLayout() {
   return (
     <>
       <StyledNavbar />
-      <Outlet />
+      <div style={{ padding: "8vh 3vh 0vh 3vh" }}>
+        <Outlet />
+      </div>
     </>
   );
 }
