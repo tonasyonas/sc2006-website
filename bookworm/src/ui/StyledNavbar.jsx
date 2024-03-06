@@ -12,8 +12,8 @@ function StyledNavbar() {
         </Navbar.Brand>
         <Container>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/bookings">
-              Bookings
+            <Nav.Link as={Link} to="/MapView">
+              Map
             </Nav.Link>
             <Nav.Link as={Link} to="/cabins">
               Cabins
