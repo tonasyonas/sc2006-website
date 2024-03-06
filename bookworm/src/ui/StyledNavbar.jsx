@@ -10,19 +10,23 @@ function StyledNavbar() {
         <Navbar.Brand as={Link} to="/">
           Bookworm
         </Navbar.Brand>
-        <Container>
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/bookings">
-              Bookings
-            </Nav.Link>
-            <Nav.Link as={Link} to="/cabins">
-              Cabins
-            </Nav.Link>
-            <Nav.Link as={Link} to="/users">
-              Users
-            </Nav.Link>
-          </Nav>
-        </Container>
+        <Nav className="me-auto">
+          <Nav.Link as={Link} to="/search">
+            Search
+          </Nav.Link>
+          <Nav.Link as={Link} to="/bookdetails">
+            Book Details
+          </Nav.Link>
+          <Nav.Link as={Link} to="/map">
+            Map
+          </Nav.Link>
+          <Nav.Link as={Link} to="/account">
+            Account
+          </Nav.Link>
+          <Nav.Link as={Link} to="/login">
+            Login
+          </Nav.Link>
+        </Nav>
       </Container>
     </Navbar>
   );
