@@ -1,8 +1,6 @@
-import Button from "react-bootstrap/Button";
+const RSS_URL = "https://eservice.nlb.gov.sg/rss/libraries";
 
-function Search() {
-  return <Button onClick={
-    fetch("https://eservice.nlb.gov.sg/rss/libraries")
+fetch(RSS_URL)
   .then((response) => response.text())
   .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
   .then((data) => {
@@ -11,7 +9,5 @@ function Search() {
     const libraryDict = {};
     items.forEach((el) => {
       libraryDict[el.querySelector("title")] = el.querySelector("georss:point");
-    }>click test</Button>;
-}
-
-export default Search;
+    });
+  });
