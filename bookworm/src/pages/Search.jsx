@@ -1,17 +1,26 @@
 import Button from "react-bootstrap/Button";
-
+import Form from "react-bootstrap/Form";
+import { useState } from "react";
+import { useTitleSearch } from "../hooks/useTitleSearch";
 function Search() {
-  return <Button onClick={
-    fetch("https://eservice.nlb.gov.sg/rss/libraries")
-  .then((response) => response.text())
-  .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
-  .then((data) => {
-    console.log(data);
-    const items = data.querySelectorAll("item");
-    const libraryDict = {};
-    items.forEach((el) => {
-      libraryDict[el.querySelector("title")] = el.querySelector("georss:point");
-    }>click test</Button>;
+  const [searchQuery, setSearchQuery] = useState("");
+  const { fetchData } = useTitleSearch();
+  return (
+    <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Search Books</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Enter query"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </Form.Group>
+      <Button variant="primary" type="submit" onClick={fetchData}>
+        Search
+      </Button>
+    </Form>
+  );
 }
 
 export default Search;

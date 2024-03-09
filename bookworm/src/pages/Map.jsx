@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 
 import { useGeolocation } from "../hooks/useGeolocation";
+import { useNLBLibraries } from "../hooks/useNLBLibraries";
 
 function Map() {
   const [mapPosition, setMapPosition] = useState([1.297588, 103.854309]);
@@ -17,6 +18,8 @@ function Map() {
     position: geolocationPosition,
     getPosition,
   } = useGeolocation();
+
+  const { RSSThing } = useNLBLibraries();
 
   useEffect(
     function () {
@@ -33,6 +36,7 @@ function Map() {
           {isLoadingPosition ? "Loading..." : "Use your position"}
         </Button>
       )}
+      <Button onClick={RSSThing}>Libraries</Button>
       <MapContainer
         center={mapPosition}
         zoom={17}
