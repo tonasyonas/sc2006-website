@@ -7,7 +7,6 @@ import Map from "./pages/Map";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
-import AppLayout from "./ui/AppLayout";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
