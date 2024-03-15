@@ -16,16 +16,14 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<AppLayout />}>
-            <Route index element={<Navigate replace to="main" />} />
-            <Route path="main" element={<Main />} />
-            <Route path="search" element={<Search />} />
-            <Route path="bookdetails" element={<BookDetails />} />
-            <Route path="map" element={<Map />} />
-            <Route path="account" element={<Account />} />
-            <Route path="login" element={<Login />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Route>
+          <Route index element={<Navigate replace to="main" />} />
+          <Route path="main" element={<Main />} />
+          <Route path="search" element={<Search />} />
+          <Route path="bookdetails" element={<BookDetails />} />
+          <Route path="map" element={<Map />} />
+          <Route path="account" element={<Account />} />
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </>
