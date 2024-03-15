@@ -7,12 +7,10 @@ import Map from "./pages/Map";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
-<<<<<<< HEAD
-import classes from './styles/App.module_login.css';
+import classes from './styles/App.module.css';
 import resets from './styles/_resets.module.css';
-import AppLayout from "./ui/AppLayout";
-=======
->>>>>>> b5e5a0abac642fa0387cff990781be888b09d698
+//import AppLayout from "./ui/AppLayout";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
