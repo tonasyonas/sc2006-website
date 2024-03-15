@@ -7,6 +7,8 @@ import Map from "./pages/Map";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
+import classes from './styles/App.module_login.css';
+import resets from './styles/_resets.module.css';
 import AppLayout from "./ui/AppLayout";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,7 +24,10 @@ function App() {
           <Route path="bookdetails" element={<BookDetails />} />
           <Route path="map" element={<Map />} />
           <Route path="account" element={<Account />} />
-          <Route path="login" element={<Login />} />
+          <Route path="login" element= 
+            {<div className={`${resets.storybrainResets} ${classes.root}`}>
+            <Login />
+          </div> }/>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
