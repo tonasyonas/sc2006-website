@@ -1,11 +1,9 @@
-import { memo } from "react";
-
 import resets from "../styles/_resets.module.css";
 import { CoverIcon } from "../ui/CoverIcon.jsx";
 import classes from "../styles/LandingPage.module.css";
+import { Link } from "react-router-dom";
 
-/* @figmaId 60:422 */
-export const Main = memo(function LandingPage() {
+export const Main = function LandingPage() {
   return (
     <div className={`${resets.storybrainResets} ${classes.root}`}>
       <div className={classes.byVeronicaRoth}>by Veronica Roth</div>
@@ -37,12 +35,14 @@ export const Main = memo(function LandingPage() {
       </div>
       <div className={classes.effortlesslySearchForBooksGetR}>
         <div className={classes.textBlock4}>
-          Effortlessly search for books, get recommendations, and more in our{" "}
+          Effortlessly search for books, get recommendations, and more in our
         </div>
         <div className={classes.textBlock5}>webapp!</div>
       </div>
       <div className={classes.rectangle12}></div>
-      <div className={classes.login}>Login</div>
+      <Link className={classes.login} to="/login">
+        Login
+      </Link>
       <div className={classes.menu}>
         <div className={classes.item}></div>
         <div className={classes.item2}>
@@ -74,7 +74,9 @@ export const Main = memo(function LandingPage() {
         <div className={classes.item12}></div>
       </div>
       <div className={classes.logo}>
-        <div className={classes.bookWorm}>BookWorm</div>
+        <Link className={classes.bookWorm} to="/main">
+          BookWorm
+        </Link>
       </div>
       <div className={classes.bookSearch}> Book Search</div>
       <div className={classes._428441551}></div>
@@ -82,6 +84,6 @@ export const Main = memo(function LandingPage() {
       <div className={classes._133350371}></div>
     </div>
   );
-});
+};
 
 export default Main;
