@@ -112,8 +112,6 @@
   position: absolute;
   left: 569px;
   top: 449px;
-  width: min-content;
-  height: min-content;
   white-space: nowrap;
   flex-direction: column;
 }
@@ -205,10 +203,7 @@
   top: 42px;
   width: 349px;
   height: 150px;
-  background-image:/* webpackIgnore: true */ url("assets/_53.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: center;
 }
 .bookWorm {
   color: #000;

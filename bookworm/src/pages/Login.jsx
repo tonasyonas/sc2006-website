@@ -18,14 +18,18 @@ function Login() {
       <input
         className={classes.eG4kuBu7uhM3dk1t}
         value={password}
+        placeholder="e.g. p@$sw0rD12"
         onChange={(e) => setPassword(e.target.value)}
+        type="password"
       ></input>
       <div className={classes.password}>Password</div>
       <div className={classes.input2}></div>
       <input
         className={classes.eGJohndoeXyzCom}
         value={email}
+        placeholder="e.g. johndoe@email.com"
         onChange={(e) => setEmail(e.target.value)}
+        type="email"
       ></input>
       <div className={classes.email}>Email</div>
       <div className={classes.inputYourEmailAndPassword}>
@@ -35,7 +39,7 @@ function Login() {
       <div className={classes.login3}>Login</div>
       <div className={classes.unnamed}> / </div>
       <div className={classes.home}>Home</div>
-      <div className={classes._53}></div>
+      <img src="assets/_51.jpg" className={classes._53}></img>
       <div className={classes.bookWorm}>BookWorm</div>
     </div>
   );
