@@ -56,7 +56,6 @@ function Map() {
     </div>
   );
 
-  // annoying prop validation thing because idk TypeScript
   function ChangeCenter({ position }) {
     const map = useMap();
     console.log(position);
