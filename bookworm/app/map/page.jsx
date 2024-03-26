@@ -1,5 +1,16 @@
 "use client";
 
-export default function Map() {
-  return <h2>Map</h2>;
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/map"), {
+  loading: () => <p>loading...</p>,
+  ssr: false,
+});
+
+export default function MapPage() {
+  return (
+    <div className="container p-72">
+      <Map />
+    </div>
+  );
 }
