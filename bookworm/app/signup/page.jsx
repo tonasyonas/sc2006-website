@@ -2,10 +2,12 @@
 import { useState } from "react";
 
 export default function SignUp() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   return (
-  <>
+    <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img className="mx-auto w-auto" src="logo.png" alt="Bookworm Logo" />
@@ -16,30 +18,29 @@ export default function SignUp() {
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
-          <div>
+            <div>
               <div className="flex items-center justify-between">
                 <label
-                  htmlFor="password"
+                  htmlFor="username"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Username
                 </label>
-                <div className="text-sm">
-                </div>
+                <div className="text-sm"></div>
               </div>
               <div className="mt-2">
                 <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
+                  id="username"
+                  name="username"
+                  type="text"
+                  autoComplete="off"
                   required
-                  value={password}
+                  value={username}
                   onChange={(e) => {
-                    setPassword(e.target.value);
+                    setUsername(e.target.value);
                   }}
-                  placeholder= " your username"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder=" your username"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-[0.6rem]"
                 />
               </div>
             </div>
@@ -63,7 +64,7 @@ export default function SignUp() {
                     setEmail(e.target.value);
                   }}
                   placeholder=" your email"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-[0.6rem]"
                 />
               </div>
             </div>
@@ -74,24 +75,23 @@ export default function SignUp() {
                   htmlFor="password"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Password
+                  Create Password
                 </label>
-                <div className="text-sm">
-                </div>
+                <div className="text-sm"></div>
               </div>
               <div className="mt-2">
                 <input
                   id="password"
                   name="password"
                   type="password"
-                  autoComplete="current-password"
+                  autoComplete="new-password"
                   required
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
                   }}
-                  placeholder= " your password"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder=" your password"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-[0.6rem]"
                 />
               </div>
             </div>
@@ -99,36 +99,34 @@ export default function SignUp() {
             <div>
               <div className="flex items-center justify-between">
                 <label
-                  htmlFor="password"
+                  htmlFor="confirm-password"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Confirm Password
                 </label>
-                <div className="text-sm">
-                </div>
+                <div className="text-sm"></div>
               </div>
               <div className="mt-2">
                 <input
-                  id="password"
-                  name="password"
+                  id="confirm-password"
+                  name="confirm-password"
                   type="password"
-                  autoComplete="current-password"
+                  autoComplete="new-password"
                   required
-                  value={password}
+                  value={confirmPassword}
                   onChange={(e) => {
-                    setPassword(e.target.value);
+                    setConfirmPassword(e.target.value);
                   }}
-                  placeholder= " your password"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="confirm your password"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-[0.6rem]"
                 />
               </div>
-
             </div>
 
             <div>
               <button
                 type="button"
-                onClick={() => login()}
+                /*onClick = {}*/
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign up
@@ -136,10 +134,7 @@ export default function SignUp() {
             </div>
           </form>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
-          
-
-          </p>
+          <p className="mt-10 text-center text-sm text-gray-500"></p>
         </div>
       </div>
     </>
