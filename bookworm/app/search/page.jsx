@@ -15,11 +15,10 @@ const SearchPage = () => {
       console.error('Error fetching search results:', error);
     }
   };
-
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <img src="logo.png" alt="Logo" className="mb-4 h-25 w-20" />
-      <div className="w-full max-w-md p-4">
+      <img src="logo.png" alt="Logo" className="mb-4 h-40 w-25" />
+      <div className="w-full max-w-md p-4 flex flex-col items-center">
         <input
           className="w-full border border-gray-300 rounded-md px-3 py-2"
           type="text"
@@ -27,12 +26,14 @@ const SearchPage = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Enter search term..."
         />
-        <button
-          className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={handleSearch}
-        >
-          Search
-        </button>
+        <div className="flex items-center justify-center"> {/* New div for centering */}
+          <button
+            className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
+        </div>
         <ul>
           {searchResults.map((result) => (
             <li key={result.id}>{result.name}</li>
@@ -40,7 +41,6 @@ const SearchPage = () => {
         </ul>
       </div>
     </div>
-  );
-};
-
+  );  
+          }
 export default SearchPage;
