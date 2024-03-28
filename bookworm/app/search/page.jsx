@@ -18,6 +18,7 @@ const SearchPage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <img src="logo.png" alt="Logo" className="mb-4 h-40 w-25" />
+      <h1 className="text-4xl font-boldho">Bookworm</h1>
       <div className="w-full max-w-md p-4 flex flex-col items-center">
         <input
           className="w-full border border-gray-300 rounded-md px-3 py-2"
