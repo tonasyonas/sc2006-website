@@ -25,7 +25,7 @@ const SearchPage = () => {
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Enter search term..."
+          placeholder="Book search"
         />
         <div className="flex items-center justify-center"> {/* New div for centering */}
           <button
