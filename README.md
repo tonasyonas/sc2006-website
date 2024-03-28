@@ -1,1 +1,0 @@
-# sc2006-website
